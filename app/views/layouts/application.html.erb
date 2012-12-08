@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+
+	<!--head is just metadata-->
+
+  <title>Rails Girls Lovely Application</title>
+
+<link rel="stylesheet" href="http://railsgirls.com/assets/bootstrap.css">
+
+<!--this has to be at the top and takes predestende -->
+
+
+
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+
+</head>
+
+
+
+<body>
+
+<!--everything diosplayed on the site should be here-->
+
+
+<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container"><a class="brand" href="/">The workshop app</a><ul class="nav">
+              <li class="active"><a href="/attendees">attendees</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+<div class="container"><%= yield %></div>
+
+
+<!--it used to be just<%= yield %> but we deleted it and swaped it for what's above--> 
+<!--you have to put all your site's content in a container because this is how twitter bootstrap works and then it is applied ON that container /// it used to be just<%= yield %> but we deleted it and swaped it for what's above--> 
+
+<footer>
+    <div class="container">Rails Girls 2012</div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @attendee.name %>
+</p>
+
+<p>
+  <b>Twitter handle:</b>
+  <%= @attendee.twitter_handle %>
+</p>
+
+<p>
+  <b>Bio:</b>
+  <%= @attendee.bio %>
+</p>
+
+<p>
+  <b>Address:</b>
+  <%= @attendee.address %>
+</p>
+
+<p>
+  <b>Picture:</b>
+
+<%= image_tag(@attendee.picture_url, :width => 250, :alt => "Picture")%>
+
+
+</p>
+
+
+<%= link_to 'Edit', edit_attendee_path(@attendee) %> |
+<%= link_to 'Back', attendees_path %>
